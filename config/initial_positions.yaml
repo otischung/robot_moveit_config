@@ -1,0 +1,17 @@
+# Default initial positions for robot_v4's ros2_control fake system
+
+initial_positions:
+  LJ1: 0
+  LJ2: 0
+  LJ3: 0
+  LJ4: 0
+  LJ5: 0
+  LJ6: 0
+  LJ7: 0
+  RJ1: 0
+  RJ2: 0
+  RJ3: 0
+  RJ4: 0
+  RJ5: 0
+  RJ6: 0
+  RJ7: 0

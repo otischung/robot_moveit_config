@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: robot_v4_description
+    relative_path: urdf/robot_v4.xacro
+  srdf:
+    relative_path: config/robot_v4.srdf
+  package_settings:
+    author_name: Otis B.C. Chung
+    author_email: p76124605@gs.ncku.edu.tw
+    generated_timestamp: 1735547008
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
