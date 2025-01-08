@@ -11,8 +11,6 @@ moveit_simple_controller_manager:
 
   left_arm_controller:
     type: FollowJointTrajectory
-    action_ns: follow_joint_trajectory
-    default: true
     joints:
       - LJ1
       - LJ2
@@ -24,8 +22,6 @@ moveit_simple_controller_manager:
     default: true
   right_arm_controller:
     type: FollowJointTrajectory
-    action_ns: follow_joint_trajectory
-    default: true
     joints:
       - RJ1
       - RJ2
@@ -37,16 +33,12 @@ moveit_simple_controller_manager:
     default: true
   left_hand_controller:
     type: FollowJointTrajectory
-    action_ns: follow_joint_trajectory
-    default: true
     joints:
       - LJ7
     action_ns: follow_joint_trajectory
     default: true
   right_hand_controller:
     type: FollowJointTrajectory
-    action_ns: follow_joint_trajectory
-    default: true
     joints:
       - RJ7
     action_ns: follow_joint_trajectory
