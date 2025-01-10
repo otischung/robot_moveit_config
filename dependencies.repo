@@ -1,0 +1,6 @@
+repositories:
+  moveit_postprocess:
+    type: git
+    url: https://github.com/otischung/moveit_postprocess.git
+    version: main
+
