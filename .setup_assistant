@@ -7,7 +7,7 @@ moveit_setup_assistant_config:
   package_settings:
     author_name: Otis B.C. Chung
     author_email: p76124605@gs.ncku.edu.tw
-    generated_timestamp: 1736317835
+    generated_timestamp: 1738401731
   control_xacro:
     command:
       - position

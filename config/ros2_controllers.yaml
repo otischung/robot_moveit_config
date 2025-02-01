@@ -36,7 +36,6 @@ left_arm_controller:
     state_interfaces:
       - position
       - velocity
-    allow_nonzero_velocity_at_trajectory_end: true
 right_arm_controller:
   ros__parameters:
     joints:
@@ -51,7 +50,6 @@ right_arm_controller:
     state_interfaces:
       - position
       - velocity
-    allow_nonzero_velocity_at_trajectory_end: true
 left_hand_controller:
   ros__parameters:
     joints:
@@ -61,7 +59,6 @@ left_hand_controller:
     state_interfaces:
       - position
       - velocity
-    allow_nonzero_velocity_at_trajectory_end: true
 right_hand_controller:
   ros__parameters:
     joints:
@@ -71,4 +68,3 @@ right_hand_controller:
     state_interfaces:
       - position
       - velocity
-    allow_nonzero_velocity_at_trajectory_end: true

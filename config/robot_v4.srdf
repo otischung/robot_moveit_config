@@ -10,30 +10,16 @@
     <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
     <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
     <group name="left_arm">
-        <joint name="virtual_joint"/>
-        <joint name="LJ1"/>
-        <joint name="LJ2"/>
-        <joint name="LJ3"/>
-        <joint name="LJ4"/>
-        <joint name="LJ5"/>
-        <joint name="LJ6"/>
+        <chain base_link="base_link" tip_link="left_hand_1"/>
+    </group>
+    <group name="right_arm">
+        <chain base_link="base_link" tip_link="right_hand_1"/>
     </group>
     <group name="left_hand">
         <joint name="LJ7"/>
-        <joint name="LJ8"/>
-    </group>
-    <group name="right_arm">
-        <joint name="virtual_joint"/>
-        <joint name="RJ1"/>
-        <joint name="RJ2"/>
-        <joint name="RJ3"/>
-        <joint name="RJ4"/>
-        <joint name="RJ5"/>
-        <joint name="RJ6"/>
     </group>
     <group name="right_hand">
         <joint name="RJ7"/>
-        <joint name="RJ8"/>
     </group>
     <!--GROUP STATES: Purpose: Define a named state for a particular group, in terms of joint values. This is useful to define states like 'folded arms'-->
     <group_state name="left_t_pose" group="left_arm">
@@ -48,15 +34,9 @@
         <joint name="LJ1" value="0"/>
         <joint name="LJ2" value="1.5707"/>
         <joint name="LJ3" value="0"/>
-        <joint name="LJ4" value="0.2"/>
+        <joint name="LJ4" value="0"/>
         <joint name="LJ5" value="0"/>
         <joint name="LJ6" value="0"/>
-    </group_state>
-    <group_state name="left_open" group="left_hand">
-        <joint name="LJ7" value="-1.2217"/>
-    </group_state>
-    <group_state name="left_close" group="left_hand">
-        <joint name="LJ7" value="0"/>
     </group_state>
     <group_state name="right_t_pose" group="right_arm">
         <joint name="RJ1" value="0"/>
@@ -70,15 +50,21 @@
         <joint name="RJ1" value="0"/>
         <joint name="RJ2" value="1.5707"/>
         <joint name="RJ3" value="0"/>
-        <joint name="RJ4" value="-0.2"/>
+        <joint name="RJ4" value="0"/>
         <joint name="RJ5" value="0"/>
         <joint name="RJ6" value="0"/>
     </group_state>
-    <group_state name="right_open" group="right_hand">
-        <joint name="RJ7" value="-1.2217"/>
+    <group_state name="left_close" group="left_hand">
+        <joint name="LJ7" value="0"/>
+    </group_state>
+    <group_state name="left_open" group="left_hand">
+        <joint name="LJ7" value="-1.2217"/>
     </group_state>
     <group_state name="right_close" group="right_hand">
         <joint name="RJ7" value="0"/>
+    </group_state>
+    <group_state name="right_open" group="right_hand">
+        <joint name="RJ7" value="-1.2217"/>
     </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
     <end_effector name="left_hand" parent_link="left_hand_1" group="left_hand"/>
@@ -171,6 +157,7 @@
     <disable_collisions link1="left_upper_clamp_1" link2="right_elbow_1" reason="Never"/>
     <disable_collisions link1="left_upper_clamp_1" link2="right_forearm_1" reason="Never"/>
     <disable_collisions link1="left_upper_clamp_1" link2="right_hand_1" reason="Never"/>
+    <disable_collisions link1="left_upper_clamp_1" link2="right_lower_clamp_1" reason="Never"/>
     <disable_collisions link1="left_upper_clamp_1" link2="right_shoulder_1" reason="Never"/>
     <disable_collisions link1="left_upper_clamp_1" link2="right_upper_arm_1" reason="Never"/>
     <disable_collisions link1="left_upper_clamp_1" link2="right_upper_clamp_1" reason="Never"/>
